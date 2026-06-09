@@ -1,4 +1,6 @@
-# FidAvatar
+# FidAvatar: High-Fidelity 360◦ Gaussian Head Avatars from Monocular Video via PortraitDiffusion Priors
+
+![FidAvatar pipeline](asset/pipeline.png)
 
 This repository intentionally omits large external model files and the vendored PyTorch3D source tree. After cloning the code, restore the following paths before running training, completion, or evaluation.
 
@@ -9,12 +11,12 @@ This repository intentionally omits large external model files and the vendored 
 | `diffportrait360/code/openai/clip-vit-large-patch14/` | 3.2 GB | https://huggingface.co/openai/clip-vit-large-patch14/tree/main |
 | `evaluation/models/antelopev2/` | 657 MB | https://huggingface.co/DIAMONIK7777/antelopev2/tree/main and https://huggingface.co/FoivosPar/Arc2Face/tree/main |
 | `weights/` | 5+ GB | https://huggingface.co/gym890/diffportrait360/tree/main and https://github.com/zjwfufu/FateAvatar |
-| `pytorch3d/` | external source dependency | https://github.com/facebookresearch/pytorch3d |
-| `submodules/3DDFA_V2/` | Git submodule | https://github.com/cleardusk/3DDFA_V2.git |
-| `submodules/GFPGAN/` | Git submodule | https://github.com/TencentARC/GFPGAN.git |
-| `submodules/MODNet/` | Git submodule | https://github.com/ZHKKKe/MODNet.git |
-| `submodules/face-parsing.PyTorch/` | Git submodule | https://github.com/zllrunning/face-parsing.PyTorch.git |
-| `submodules/nvdiffrast/` | Git submodule | https://github.com/NVlabs/nvdiffrast.git |
+| `pytorch3d/` | Dependency | https://github.com/facebookresearch/pytorch3d |
+| `submodules/3DDFA_V2/` | Submodule | https://github.com/cleardusk/3DDFA_V2.git |
+| `submodules/GFPGAN/` | Submodule | https://github.com/TencentARC/GFPGAN.git |
+| `submodules/MODNet/` | Submodule | https://github.com/ZHKKKe/MODNet.git |
+| `submodules/face-parsing.PyTorch/` | Submodule | https://github.com/zllrunning/face-parsing.PyTorch.git |
+| `submodules/nvdiffrast/` | Submodule | https://github.com/NVlabs/nvdiffrast.git |
 
 ## Setup
 
@@ -27,17 +29,17 @@ git clone --recursive <repo-url>
 If the repository was cloned without `--recursive`, initialize the source submodules afterward:
 
 ```bash
-git submodule update --init --recursive
+Submodule update --init --recursive
 ```
 
 When creating the repository from this local folder, add the submodule gitlinks once before the first push:
 
 ```bash
-git submodule add https://github.com/cleardusk/3DDFA_V2.git submodules/3DDFA_V2
-git submodule add https://github.com/TencentARC/GFPGAN.git submodules/GFPGAN
-git submodule add https://github.com/ZHKKKe/MODNet.git submodules/MODNet
-git submodule add https://github.com/zllrunning/face-parsing.PyTorch.git submodules/face-parsing.PyTorch
-git submodule add https://github.com/NVlabs/nvdiffrast.git submodules/nvdiffrast
+Submodule add https://github.com/cleardusk/3DDFA_V2.Submodules/3DDFA_V2
+Submodule add https://github.com/TencentARC/GFPGAN.Submodules/GFPGAN
+Submodule add https://github.com/ZHKKKe/MODNet.Submodules/MODNet
+Submodule add https://github.com/zllrunning/face-parsing.PyTorch.Submodules/face-parsing.PyTorch
+Submodule add https://github.com/NVlabs/nvdiffrast.Submodules/nvdiffrast
 ```
 
 Create and activate the conda environment:
@@ -143,3 +145,17 @@ spherehead-ckpt-025000.pkl
 up_billboard_tri.obj
 vgg16.pt
 ```
+
+## Acknowledgement
+
+This repository is built on [3DGS](https://github.com/graphdeco-inria/gaussian-splatting) and incorporates several amazing open source projects: [3DDFA_V2](https://github.com/cleardusk/3DDFA_V2), [GFPGAN](https://github.com/TencentARC/GFPGAN), and Diffportrait360.
+
+We thank [FateAvatar](https://github.com/zjwfufu/FateAvatar), [SplattingAvatar](https://github.com/initialneil/SplattingAvatar), [MonoGaussianAvatar](https://github.com/yufan1012/MonoGaussianAvatar), and [GaussianAvatars](https://github.com/ShenhanQian/GaussianAvatars) for releasing their code, which facilitates our experiments.
+
+Thank all the authors for their great work.
+
+## License
+
+Copyright (c) 2026 FidAvatar authors. All rights reserved unless a separate license file is added.
+
+This repository includes or depends on third-party code, pretrained models, and datasets. Those components are governed by their original licenses and terms of use, including the referenced GitHub repositories and Hugging Face model pages.
