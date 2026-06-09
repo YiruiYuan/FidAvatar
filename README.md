@@ -23,7 +23,7 @@ This repository intentionally omits large external model files and the vendored 
 Clone the repository with submodules:
 
 ```bash
-git clone --recursive <repo-url>
+git clone --recursive https://github.com/YiruiYuan/FidAvatar.git
 ```
 
 If the repository was cloned without `--recursive`, initialize the source submodules afterward:
