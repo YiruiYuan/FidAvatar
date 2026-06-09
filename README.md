@@ -8,15 +8,15 @@ This repository intentionally omits large external model files and the vendored 
 
 | Local path | Approx. size | Source |
 | --- | ---: | --- |
-| `diffportrait360/code/openai/clip-vit-large-patch14/` | 3.2 GB | https://huggingface.co/openai/clip-vit-large-patch14/tree/main |
-| `evaluation/models/antelopev2/` | 657 MB | https://huggingface.co/DIAMONIK7777/antelopev2/tree/main and https://huggingface.co/FoivosPar/Arc2Face/tree/main |
-| `weights/` | 5+ GB | https://huggingface.co/gym890/diffportrait360/tree/main and https://github.com/zjwfufu/FateAvatar |
-| `pytorch3d/` | Dependency | https://github.com/facebookresearch/pytorch3d |
-| `submodules/3DDFA_V2/` | Submodule | https://github.com/cleardusk/3DDFA_V2.git |
-| `submodules/GFPGAN/` | Submodule | https://github.com/TencentARC/GFPGAN.git |
-| `submodules/MODNet/` | Submodule | https://github.com/ZHKKKe/MODNet.git |
-| `submodules/face-parsing.PyTorch/` | Submodule | https://github.com/zllrunning/face-parsing.PyTorch.git |
-| `submodules/nvdiffrast/` | Submodule | https://github.com/NVlabs/nvdiffrast.git |
+| `diffportrait360/code/openai/clip-vit-large-patch14/` | 3.2 GB | [openai/clip-vit-large-patch14](https://huggingface.co/openai/clip-vit-large-patch14/tree/main) |
+| `evaluation/models/antelopev2/` | 657 MB | [DIAMONIK7777/antelopev2](https://huggingface.co/DIAMONIK7777/antelopev2/tree/main), [FoivosPar/Arc2Face](https://huggingface.co/FoivosPar/Arc2Face/tree/main) |
+| `weights/` | 5+ GB | [gym890/diffportrait360](https://huggingface.co/gym890/diffportrait360/tree/main), [zjwfufu/FateAvatar](https://github.com/zjwfufu/FateAvatar) |
+| `pytorch3d/` | Dependency | [facebookresearch/pytorch3d](https://github.com/facebookresearch/pytorch3d) |
+| `submodules/3DDFA_V2/` | Submodule | [cleardusk/3DDFA_V2](https://github.com/cleardusk/3DDFA_V2.git) |
+| `submodules/GFPGAN/` | Submodule | [TencentARC/GFPGAN](https://github.com/TencentARC/GFPGAN.git) |
+| `submodules/MODNet/` | Submodule | [ZHKKKe/MODNet](https://github.com/ZHKKKe/MODNet.git) |
+| `submodules/face-parsing.PyTorch/` | Submodule | [zllrunning/face-parsing.PyTorch](https://github.com/zllrunning/face-parsing.PyTorch.git) |
+| `submodules/nvdiffrast/` | Submodule | [NVlabs/nvdiffrast](https://github.com/NVlabs/nvdiffrast.git) |
 
 ## Setup
 
@@ -24,22 +24,6 @@ Clone the repository with submodules:
 
 ```bash
 git clone --recursive https://github.com/YiruiYuan/FidAvatar.git
-```
-
-If the repository was cloned without `--recursive`, initialize the source submodules afterward:
-
-```bash
-Submodule update --init --recursive
-```
-
-When creating the repository from this local folder, add the submodule gitlinks once before the first push:
-
-```bash
-Submodule add https://github.com/cleardusk/3DDFA_V2.Submodules/3DDFA_V2
-Submodule add https://github.com/TencentARC/GFPGAN.Submodules/GFPGAN
-Submodule add https://github.com/ZHKKKe/MODNet.Submodules/MODNet
-Submodule add https://github.com/zllrunning/face-parsing.PyTorch.Submodules/face-parsing.PyTorch
-Submodule add https://github.com/NVlabs/nvdiffrast.Submodules/nvdiffrast
 ```
 
 Create and activate the conda environment:
